@@ -1,0 +1,35 @@
+Rotation R_E^0:
+[cos(q1), -cos(q2 + q3)*sin(q1), -sin(q2 + q3)*sin(q1)]
+[sin(q1),  cos(q2 + q3)*cos(q1),  sin(q2 + q3)*cos(q1)]
+[      0,         -sin(q2 + q3),          cos(q2 + q3)]
+ 
+Foot position p_E:
+l1*cos(q1) - l2*sin(q1)*sin(q2) + l3*cos(q2)*cos(q3)*sin(q1) - l3*sin(q1)*sin(q2)*sin(q3)
+l1*sin(q1) + l2*cos(q1)*sin(q2) - l3*cos(q1)*cos(q2)*cos(q3) + l3*cos(q1)*sin(q2)*sin(q3)
+                                                        l0 + l3*sin(q2 + q3) + l2*cos(q2)
+ 
+p_E minus [c1*l1 + s1*K; s1*l1 - c1*K; l0 + H]:
+0
+0
+0
+ 
+J_L minus the formula in jacobian_leg.m:
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+ 
+Joint axes [z0 z1 z2]:
+[0, -sin(q1 + pi/2), -cos(q1)]
+[0,  cos(q1 + pi/2), -sin(q1)]
+[1,               0,        0]
+ 
+det(J_L) factors:
+[l2, l3, cos(q3), l3*cos(q2 + q3) - l2*sin(q2)]
+ 
+det(J_L) - l2*l3*cos(q3)*K = 0
+J_L*[qd1; qd2; qd3] - v (closed-form inverse):
+0
+0
+0
+ 
+Inverse kinematics: max position error over 5000 random configurations, all four branches = 3.62e-12 cm

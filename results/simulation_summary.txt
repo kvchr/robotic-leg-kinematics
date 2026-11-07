@@ -1,0 +1,14 @@
+Robotic leg kinematic simulation (MATLAB 2024b)
+Links l0 = 15, l1 = 20, l2 = 30, l3 = 30 cm
+pA = (20, -30, 45) cm, pB = (20, -30, 60) cm, centre pC = (20, -30, 52.5) cm, R = 7.5 cm
+Period T = 2 s (two segments of 1 s), acceleration fraction 0.333, dt = 0.001 s, cycles = 1
+Path length: semicircle 23.562 cm, line 15.000 cm
+Peak foot speed: swing 35.343 cm/s, stance 22.500 cm/s (theory 35.343 and 22.500)
+Foot height above the walking plane: max 7.500 cm
+Max |FK(q(t)) - p_d(t)| = 1.81e-14 cm
+Max |J^-1 v - dq/dt (numerical)| = 6.75e-04 rad/s
+q1 range [0.000, 0.000] deg
+q2 range [-8.031, 12.680] deg
+q3 range [-5.031, 38.682] deg
+Peak |qdot|: q1 0.000, q2 68.087, q3 114.934 deg/s
+Min |cos q3| = 0.781, min |l3*c23 - l2*s2| = 22.500 cm, min |det J|/(l2*l3*(l2+l3)) = 0.374
